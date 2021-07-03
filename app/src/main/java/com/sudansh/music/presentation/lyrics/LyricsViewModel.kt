@@ -11,7 +11,7 @@ class LyricsViewModel(private val mediaDataSource: MediaDataSource) : ViewModel(
     val lyrics: LiveData<Lyrics> = _lyrics.distinctUntilChanged()
 
     private val _currentLyricsPositionData = MutableLiveData<Int>()
-    val currentLyricsPositionData: LiveData<Int> = _currentLyricsPositionData
+    val currentLyricsPositionData: LiveData<Int> = _currentLyricsPositionData.distinctUntilChanged()
 
     fun getLyrics(mediaId: String, title: String) {
         viewModelScope.launch {

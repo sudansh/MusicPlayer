@@ -12,8 +12,6 @@ import com.sudansh.music.presentation.base.BaseAndroidViewModel
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
-import timber.log.Timber
-
 
 class MainViewModel(app: Application) : BaseAndroidViewModel(app), KoinComponent {
     private val musicService: MusicService by inject()
@@ -55,7 +53,6 @@ class MainViewModel(app: Application) : BaseAndroidViewModel(app), KoinComponent
             .subscribeOn(AndroidSchedulers.mainThread())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe {
-                Timber.i("xxx audiosession: $it")
                 _audioSessionId.value = it
             })
     }

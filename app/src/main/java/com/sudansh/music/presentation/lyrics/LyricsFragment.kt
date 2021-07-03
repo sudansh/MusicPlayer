@@ -10,7 +10,6 @@ import com.sudansh.music.databinding.FragmentLyricsBinding
 import com.sudansh.music.presentation.main.MainViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import timber.log.Timber
 
 class LyricsFragment : Fragment() {
     private val viewModel: MainViewModel by sharedViewModel()
@@ -51,7 +50,6 @@ class LyricsFragment : Fragment() {
             lyricViewModel.setPlaybackPosition(it)
         }
         lyricViewModel.currentLyricsPositionData.observe(viewLifecycleOwner) { position ->
-            Timber.i("xxx position: $position")
             lyricsAdapter.setCurrentPosition(position)
 //            val scrollTo = if (position < 4) position else position + 4
             binding.rvLyrics.scrollToPosition(position)

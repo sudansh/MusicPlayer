@@ -10,10 +10,9 @@
             type="com.sudansh.music.presentation.main.MainViewModel" />
     </data>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:padding="@dimen/margin_large">
 
         <TextView
@@ -22,6 +21,8 @@
             android:layout_height="wrap_content"
             android:text="@{viewModel.musicTitle}"
             android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="@tools:sample/lorem" />
 
         <TextView
@@ -31,16 +32,22 @@
             android:layout_marginTop="@dimen/margin_small"
             android:text="@{viewModel.musicSubtitle}"
             android:textSize="@dimen/subtitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title"
             tools:text="@tools:sample/lorem" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_lyrics"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:layout_marginTop="@dimen/margin_large"
             android:background="@drawable/bg_lyrics"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/artist"
             tools:listitem="@layout/list_item_lyrics" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -50,6 +50,7 @@ class LyricsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun getItemCount() = lyricsItemList.size
 
     internal fun setCurrentPosition(position: Int) {
+        if (currentPosition == position) return
         currentPosition = position
     }
 
