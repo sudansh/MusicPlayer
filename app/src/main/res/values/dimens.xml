@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="artwork">56dp</dimen>
+    <dimen name="artwork_radius">4dp</dimen>
+    <dimen name="margin_normal">16dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="tab_radius">14dp</dimen>
+    <dimen name="lyrics_radius">16dp</dimen>
+    <dimen name="lyrics_padding">25dp</dimen>
+    <dimen name="margin_huge">60dp</dimen>
+    <dimen name="heading">20sp</dimen>
+    <dimen name="subtitle">13sp</dimen>
+    <dimen name="tab_height">32dp</dimen>
+</resources>

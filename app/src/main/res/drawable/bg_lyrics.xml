@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <corners android:radius="@dimen/lyrics_radius" />
+    <solid android:color="@color/black_10" />
+    <padding
+        android:bottom="@dimen/lyrics_padding"
+        android:left="@dimen/lyrics_padding"
+        android:right="@dimen/lyrics_padding"
+        android:top="@dimen/lyrics_padding" />
+</shape>

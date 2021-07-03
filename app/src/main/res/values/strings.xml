@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Music</string>
+    <string name="up_next">Up Next</string>
+    <string name="up_next_format">Up Next %s</string>
+    <string name="permission_rationale">Audio Permission is required to display visualization</string>
+    <string name="allow">allow</string>
+    <string name="tab_detail">Details</string>
+    <string name="tab_lyrics">Lyrics</string>
+    <string name="tab_visualization">Visualization</string>
+    <string name="now_playing">Now Playing</string>
+</resources>

@@ -1,0 +1,28 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@drawable/bg_main</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlayArtwork">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/artwork_radius</item>
+    </style>
+
+    <style name="TabBarStyle">
+        <item name="textAllCaps">false</item>
+        <item name="tabBackground">@drawable/tabview_bg</item>
+        <item name="android:background">@color/tabBgColor</item>
+        <item name="tabIndicator">@null</item>
+        <item name="tabMode">auto</item>
+        <item name="tabTextColor">#000000</item>
+        <item name="tabTextAppearance">@style/TabTextAppearance</item>
+    </style>
+
+    <style name="TabTextAppearance" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+</resources>

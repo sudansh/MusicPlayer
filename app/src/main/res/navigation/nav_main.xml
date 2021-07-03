@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/playerFragment">
+
+    <fragment
+        android:id="@+id/playlistFragment"
+        android:name="com.sudansh.music.presentation.playlist.PlaylistFragment"
+        android:label="PlaylistFragment" />
+    <fragment
+        android:id="@+id/playerFragment"
+        android:name="com.sudansh.music.presentation.details.PlayerFragment"
+        android:label="PlayerFragment">
+        <action
+            android:id="@+id/toPlaylist"
+            app:destination="@id/playlistFragment"
+            app:enterAnim="@anim/fragment_model_enter"
+            app:exitAnim="@anim/fragment_model_exit"
+            app:popEnterAnim="@anim/fragment_model_pop_enter"
+            app:popExitAnim="@anim/fragment_model_pop_exit" />
+    </fragment>
+
+</navigation>

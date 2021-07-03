@@ -1,0 +1,32 @@
+[
+  {
+    "name": "You are my soniya",
+    "media_id": "soniya",
+    "artist": "Sonu Nigam",
+    "uri": "asset:///soniya.mp3",
+    "subtitle_uri": "asset:///soniya.xml",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/86/d3/96/86d396fd-9230-aab9-115b-bada9149d8de/888880945778.jpg/1000x1000bb.webp",
+    "subtitle_mime_type": "application/ttml+xml",
+    "year": "1997"
+  },
+  {
+    "name": "Bijuria",
+    "media_id": "bijuria",
+    "artist": "Sonu Nigam",
+    "uri": "asset:///bijuria.mp3",
+    "subtitle_uri": "asset:///bijuria.xml",
+    "artwork": "https://img6.bdbphotos.com/images/orig/d/t/dtvd6hp95scx59c6.jpg",
+    "subtitle_mime_type": "application/ttml+xml",
+    "year": "1994"
+  },
+  {
+    "name": "Satrangi Re",
+    "media_id": "satrangi",
+    "artist": "Sonu Nigam",
+    "uri": "asset:///satrangi.mp3",
+    "subtitle_uri": "asset:///satrangi.xml",
+    "artwork": "https://is5-ssl.mzstatic.com/image/thumb/Music114/v4/8e/f8/85/8ef88544-a6c7-018b-0a75-dc3b6b024fa0/cover.jpg/1000x1000bb.webp",
+    "subtitle_mime_type": "application/ttml+xml",
+    "year": "1998"
+  }
+]

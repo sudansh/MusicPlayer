@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.sudansh.music.presentation.main.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/nav_host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/margin_normal"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toTopOf="@id/player_control_view"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navGraph="@navigation/nav_main" />
+
+        <com.google.android.exoplayer2.ui.StyledPlayerControlView
+            android:id="@+id/player_control_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/margin_large"
+            android:paddingEnd="@dimen/margin_large"
+            android:paddingBottom="@dimen/margin_large"
+            app:controller_layout_id="@layout/custom_controls"
+            app:layout_constraintBottom_toTopOf="@id/nextSongTitle"
+            app:show_buffering="never"
+            app:show_timeout="0" />
+
+        <TextView
+            android:id="@+id/nextSongTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_top_rounded"
+            android:paddingStart="@dimen/margin_large"
+            android:paddingTop="@dimen/margin_normal"
+            android:paddingEnd="@dimen/margin_large"
+            android:paddingBottom="@dimen/margin_normal"
+            android:text="@{@string/up_next_format(viewModel.nextItemTitle)}"
+            android:textSize="12sp"
+            android:visibility="@{viewModel.isPlayingVisible}"
+            app:drawableEndCompat="@drawable/ic_up"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
