@@ -6,33 +6,23 @@ import androidx.recyclerview.widget.RecyclerView
 import com.sudansh.music.databinding.ListItemLyricsBinding
 import com.sudansh.music.model.Lyric
 
-class LyricsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class LyricsAdapter : RecyclerView.Adapter<LyricsAdapter.LyricsViewHolder>() {
 
-    data class LyricsItem(var time: Long, var lyric: String)
-
+    private var lyricsItemList = emptyList<Lyric>()
     private var currentPosition = 0
-
 
     class LyricsViewHolder(val binding: ListItemLyricsBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(item: LyricsItem, currentPosition: Boolean) {
-            val lyric = item.lyric
-            binding.title = lyric
+        fun onBind(item: Lyric, currentPosition: Boolean) {
+            binding.title = item.value
             binding.isCurrent = currentPosition
         }
     }
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        if (position == currentPosition) (holder as? LyricsViewHolder)?.onBind(
-            lyricsItemList[position],
-            true
-        )
-        else (holder as? LyricsViewHolder)?.onBind(lyricsItemList[position], false)
+    override fun onBindViewHolder(holder: LyricsViewHolder, position: Int) {
+        holder.onBind(lyricsItemList[position], position == currentPosition)
 
     }
-
-
-    private var lyricsItemList = emptyList<LyricsItem>()
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -52,10 +42,11 @@ class LyricsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     internal fun setCurrentPosition(position: Int) {
         if (currentPosition == position) return
         currentPosition = position
+        notifyDataSetChanged()
     }
 
     fun setData(lyricItems: List<Lyric>) {
-        lyricsItemList = lyricItems.map { LyricsItem(it.timeStampMillis, it.value) }
+        lyricsItemList = lyricItems
         notifyDataSetChanged()
     }
 }
