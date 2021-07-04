@@ -51,9 +51,7 @@ class LyricsFragment : Fragment() {
         }
         lyricViewModel.currentLyricsPositionData.observe(viewLifecycleOwner) { position ->
             lyricsAdapter.setCurrentPosition(position)
-//            val scrollTo = if (position < 4) position else position + 4
             binding.rvLyrics.scrollToPosition(position)
-            lyricsAdapter.notifyDataSetChanged()
         }
     }
 }
