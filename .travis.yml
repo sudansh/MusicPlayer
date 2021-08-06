@@ -5,6 +5,7 @@ dist: trusty
 android:
   components:
     - tools
+    - android-30
     - platform-tools
     - extra-google-google_play_services
     - extra-google-m2repository
